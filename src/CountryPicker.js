@@ -284,9 +284,9 @@ export default class CountryPicker extends Component {
             this.props.children ?
               this.props.children
             :
-              (<View style={styles.touchFlag}>
-                {CountryPicker.renderFlag(this.props.cca2)}
-              </View>)
+            (<View style={styles.touchFlag}>
+              {CountryPicker.renderFlag(this.props.cca2)}
+            </View>)
           }
         </TouchableOpacity>
         <Modal
@@ -321,7 +321,7 @@ export default class CountryPicker extends Component {
                   ref={listView => this._listView = listView}
                   dataSource={this.state.dataSource}
                   renderRow={country => this.renderCountry(country)}
-                  // initialListSize={30}
+                  initialListSize={getAllCountries().length}
                   // pageSize={15}
                   onLayout={
                     (
