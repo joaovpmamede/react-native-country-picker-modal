@@ -321,8 +321,8 @@ export default class CountryPicker extends Component {
                   ref={listView => this._listView = listView}
                   dataSource={this.state.dataSource}
                   renderRow={country => this.renderCountry(country)}
-                  initialListSize={30}
-                  pageSize={15}
+                  // initialListSize={30}
+                  // pageSize={15}
                   onLayout={
                     (
                       { nativeEvent: { layout: { y: offset } } }
